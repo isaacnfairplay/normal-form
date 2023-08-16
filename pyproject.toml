@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "normal-form"
+version = "0.1.0"
+description = "This package is designed to help data engineers automatically convert tabular data to 3NF format or better"
+authors = ["isaacnfairplay <64980436+isaacnfairplay@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "normal_form"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+polars = "^0.18.15"
+more-itertools = "^10.1.0"
+
+[tool.poetry.group.dev.dependencies]
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
