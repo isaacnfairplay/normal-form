@@ -1,0 +1,13 @@
+import polars as pl
+
+def is_one_to_one(col1,col2,frame):
+    ...
+
+def group_frames(dataframe):
+    ...
+
+def recursive_group(darafrane):
+    ...
+
+def attribute_frane_to_int(frame):
+    ...
