@@ -48,6 +48,11 @@ def add_index_column(frame: pl.LazyFrame, group: list[str], column_manager: Colu
 class Relationship:
     on: str
     is_foreign_key: bool
+    
+    def make_opposite(self):
+        return Relationship(
+        self.on, 
+        not self.is_foreign_key)
 
 def determine_best_column(frame: pl.LazyFrame, group: set[str]) -> str | None:
     """Factors are (has id or ID or Id in the name), is an int, and is unique"""
