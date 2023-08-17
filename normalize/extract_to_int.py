@@ -1,5 +1,6 @@
 from polars import pl
 from .normalize_core import Table
+
 def extract_hashable_to_int(table: Table):
   current_frame table.frame
   new_tables = []
