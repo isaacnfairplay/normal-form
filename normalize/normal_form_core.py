@@ -75,6 +75,14 @@ class Table:
         if self._relationships is None:
             self._relationships = []
         return self._relationships
+    def inherit_rels(self,
+        newframe : pl.LazyFrame,
+        newrel: Relationship) ->Table:
+        new_rels = self.relationships
+        new_rels.append(newrel)
+        return Table(
+        newframe, 
+        new_rels)
 
     @property
     def groups(self) -> list[set[str]]:
